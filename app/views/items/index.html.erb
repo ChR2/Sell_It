@@ -1,0 +1,28 @@
+<h1>Items for Sale</h1>
+
+<% if flash[:notice] %>
+  <div id="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= link_to item.title, {action: 'show', id: item.id} %></td>
+        <td>$<%= item.price %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
