@@ -12,6 +12,8 @@ gem 'uglifier', '>= 1.3.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem "twitter-bootstrap-rails"
+
 
 group :development do
   # Spring speeds up development by keeping your application running in the
