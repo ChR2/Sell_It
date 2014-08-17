@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sell_It</title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application', media: 'all' %>
   
   <%= csrf_meta_tags %>
 </head>
+
 <body>
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <a class="navbar-brand" href="#">Sell_It</a>
-  </div>
-</nav>
-<div class="container">
+    <div class="container">
+      <a class="navbar-brand" href="/">Sell_It</a>
+    </div>
+  </nav>
+  <div class="container-fluid">
 <%= yield %>
-</div>
-<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-  <div class="container">
-  <p class = "navbar-text ">#Sell_It - ©2014 # Project Declutter ‎ - Terms of Use - Privacy </p>
   </div>
-</nav>
+  
+
+  <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="container">
+      <div class="span7 text-center">
+        <button type="button" class="btn btn-default">DONE</button>
+      </div>
+    </div>
+  </nav>
 </body>
 </html>
