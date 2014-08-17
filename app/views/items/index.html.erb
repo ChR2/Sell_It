@@ -4,23 +4,28 @@
     <%= flash[:notice] %>
   </div>
 <% end %>
-        <% @items.each do |item| %>
-<div class="row">
-  <div class= "span8">
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img src="http://placehold.it/260x250" alt="...">
-        <div class="caption">
-          <h3><%= link_to item.title, {action: 'show', id: item.id} %> </h3>
-          <h4>$<%= item.price %></h4>
-          <span class="input-group-addon">
-          <input type="checkbox">
-        </span>
-        </div>
+
+<% if @items.empty? %>
+  <p>There are no items for sale at this time.</p>
+<% else %>
+  <% @items.each do |item| %>
+    <div class="row">
+      <div class= "span8">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="http://placehold.it/260x250" alt="...">
+            <div class="caption">
+              <h3><%= link_to item.title, {action: 'show', id: item.id} %></h3>
+              <h4>$<%= item.price %></h4>
+              <span class="input-group-addon">
+              <input type="checkbox">
+            </span>
+            </div>
+          </div>
       </div>
-  </div>
-</div>
-        <% end %>
+    </div>
+  <% end %>
+<% end %>
 
 
 
