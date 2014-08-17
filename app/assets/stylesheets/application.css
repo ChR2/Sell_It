@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+.container-fluid { margin: 5%;}
+
+.row-fluid {margin: 5%;}
+        
+
+.navbar { background-color: #9DE0AD;}
+.navbar-brand {
+  width: 100%;
+  text-align: center;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: bold;
+  font-size: 200%;
+  color: #594F4F;
+}
+.btn {background-color: #45ADA8;
+      color: #594F4F;}
+
+body {margin: 0 auto;
+      min-height: 100%; /* Set to minimum height so overflow doesn't get hidden */
+      overflow-y: hidden; /* HIDE overflow; I know, it doesn't make much sense */
+      position: relative;
+      background-color: #E5FCC2}
+h2 {color: #45ADA8;}
+h3 {color: #547980;}
