@@ -8,6 +8,8 @@
 <% if @items.empty? %>
   <p>There are no items for sale at this time.</p>
 <% else %>
+  <%= form_tag({controller: "item_requests", action: "new"}, method: "get", class: 'form') do %>
+    
   <% @items.each do |item| %>
     <div class="row">
       <div class= "span8">
@@ -18,12 +20,14 @@
               <h3><%= link_to item.title, {action: 'show', id: item.id} %></h3>
               <h4><%=  number_to_currency(item.price, :unit => "$") %></h4>
               <span class="input-group-addon">
-              <input type="checkbox">
+              <%= check_box_tag(:item, item.id, false, {name: "item[]"}) %>
+              <%= label_tag(:item, "I'm interested") %>
             </span>
             </div>
           </div>
       </div>
     </div>
+    <% end %>
   <% end %>
 <% end %>
 
