@@ -1,7 +1,22 @@
-<h1><%= @item.title %></h1>
-<p><strong>Description: </strong> <%= @item.description %><br />
-<strong>Price:</strong> $<%= @item.price %><br />
-<%= link_to 'Back', {:action => 'index'} %>
+<div class="row-fluid">
+  <div class="col-md-5">                 
+    <img src="http://placehold.it/400x400" alt="...">
+    <br> 
+  </div>
 
-
-
+  <div class="col-md-7">
+    <article><p>
+        <p><h2><%= @item.title %></h2></p>
+        <br>
+        <p><h3><strong>Description:<strong></h3>
+           <h3> <%= @item.description %></h3></p>
+           <br>
+        <p><h3>Price: <%= number_to_currency(@item.price, :unit => "$") %></h3></p>
+        <br>
+        <br>
+   <a class="btn" href="/">Back to Listings</a>
+    </p></article>
+  </div>
+   <div class="clearfix visible-xs-block"></div>
+</div>
+   <br>
