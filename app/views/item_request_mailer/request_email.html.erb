@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>There is a new offer from, <%= @item_request.email %></h1>
+       <% @item_request.items.each do |item| %>
+    <p>For <li><%= item.title %></li>
+       <% end %>
+    </p>
+     <p>Message: <%= @item_request.message %></p>
+  </body>
+</html>
