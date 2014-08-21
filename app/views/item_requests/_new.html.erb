@@ -1,0 +1,49 @@
+<% modal ||= false %>
+<% remote = modal ? true : false %>
+<%= form_for(@item_request, remote: remote, html: {role: :form, 'data-model' => 'item_request'}) do |f| %>
+
+  <%# Added Bootstrap classes, and help-block container for error messages %>
+  <div class="form-group">
+    <%= f.label :email, class: 'control-label' %><br>
+    <%= f.text_field :email, class: 'form-control' %>
+    <span class="help-block"></span>
+  </div>
+
+  <%# Added Bootstrap classes, and help-block container for error messages %>
+  <div class="form-group">
+    <%= f.label :message, class: 'control-label' %><br>
+    <%= f.text_area :message, class: 'form-control' %>
+    <span class="help-block"></span>
+  </div>
+
+  <%# Added Bootstrap classes %>
+  <div class="actions">
+    <%= f.submit 'Submit', class: 'btn btn-default' %>
+  </div>
+
+<% end %>
+
+<!--
+<%= form_for(@item_request) do |f| %>
+  <% @items.each do |item| %>
+    <p>
+      <%= item.title %>
+    </p>
+    <%= hidden_field_tag("item[]", item.id) %>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :message %><br>
+    <%= f.text_area :message %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %> -->
