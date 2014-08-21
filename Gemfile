@@ -21,7 +21,7 @@ group :development do
   # background. Read more: https://github.com/rails/spring
   gem 'spring'
 
-  # Mutes console log entries for CSS, JavaScript, and other assets.
+  #  console log entries for CSS, JavaScript, and other assets.
   # See: https://github.com/evrone/quiet_assets
   gem 'quiet_assets'
 end

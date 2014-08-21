@@ -9,7 +9,7 @@
   <p>There are no items for sale at this time.</p>
 <% else %>
   <%= form_tag({controller: "item_requests", action: "new"}, method: "get", class: 'form') do %>
-    
+
   <% @items.each do |item| %>
     <div class="row">
       <div class= "span8">
