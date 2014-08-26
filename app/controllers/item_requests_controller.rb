@@ -1,6 +1,5 @@
 class ItemRequestsController < ApplicationController
  def new
-     p params
     @items = Item.where(:id => params[:item])
     @item_request = ItemRequest.new(items: @items)
   end
