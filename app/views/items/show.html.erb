@@ -3,20 +3,18 @@
     <img src="http://placehold.it/400x400" alt="...">
     <br>
   </div>
-
   <div class="col-md-7">
-    <article><p>
-        <p><h2><%= @item.title %></h2></p>
+    <article>
+        <h2><%= @item.title %></h2>
         <br>
-        <p><h3><strong>Description:<strong></h3>
-           <h3> <%= @item.description %></h3></p>
+        <h3><strong>Description:<strong></h3>
+           <h3> <%= @item.description %></h3>
            <br>
-        <p><h3>Price: <%= number_to_currency(@item.price, :unit => "$") %></h3></p>
+        <h3>Price: <%= number_to_currency(@item.price, :unit => "$") %></h3>
         <br>
         <br>
-   <a class="btn" href="/">Back to Listings</a>
-    </p></article>
+      <a class="btn" href="/">Back to Listings</a>
+    </article>
   </div>
-   <div class="clearfix visible-xs-block"></div>
+  <div class="clearfix visible-xs-block"></div>
 </div>
-   <br>

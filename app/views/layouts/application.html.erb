@@ -3,7 +3,6 @@
 <head>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application', media: 'all' %>
-
   <%= csrf_meta_tags %>
 </head>
 
@@ -21,8 +20,7 @@
   <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
     <div class="container">
       <div class="span7 text-center">
-      <%= link_to 'DONE', '#email-modal', 'data-toggle' => 'modal' %> 
-        <!-- <input type="submit" class="btn btn-default" value='DONE'> -->
+        <input type="submit" class="btn btn-default" value='DONE'>
       </div>
     </div>
   </nav>
