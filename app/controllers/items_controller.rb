@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.order('created_at DESC')
-    @item_request = ItemRequest.new 
+    @item_request = ItemRequest.new
   end
 
   def show
