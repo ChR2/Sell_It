@@ -1,7 +1,13 @@
 class ItemRequestsController < ApplicationController
- def new
+  def new
     @items = Item.where(:id => params[:item])
     @item_request = ItemRequest.new(items: @items)
+
+    if request.xhr?
+      render partial: 'item_requests/form', locals: { item_request: @item_request }
+    else
+      render 'new'
+    end
   end
 
   def create
