@@ -15,7 +15,6 @@ gem 'jquery-rails'
 
 gem "twitter-bootstrap-rails"
 
-
 group :development do
   # Spring speeds up development by keeping your application running in the
   # background. Read more: https://github.com/rails/spring
@@ -27,8 +26,6 @@ group :development do
 end
 
 group :test, :development do
-  gem 'pg'
-
   # Use dotenv with Rails
   # See: https://github.com/bkeepers/dotenv
   gem 'dotenv-rails'
@@ -55,6 +52,5 @@ end
 # Gems we need on Heroku but not locally
 group :production do
   gem 'thin'
-  gem 'pg'
   gem 'rails_12factor'
 end
