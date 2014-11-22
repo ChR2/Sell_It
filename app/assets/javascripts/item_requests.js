@@ -6,8 +6,9 @@ $(document).ready(function(){
     //   el.modal('show');
     // });
 
-    $('#email_modal .modal-body').html(data);
     $('#email_modal').modal('show');
+    $('#email_modal .modal-body').html(data);
+    console.log("working")
   });
 });
 
